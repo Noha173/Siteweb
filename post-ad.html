@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نشر إعلان جديد</title>
+</head>
+<body>
+<header>
+  <h1>نشر إعلان جديد</h1>
+</header>
+<div class="container">
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <label>عنوان الإعلان:</label><br>
+    <input type="text" name="title" required><br><br>
+
+    <label>وصف الإعلان:</label><br>
+    <textarea name="description" rows="5" required></textarea><br><br>
+
+    <label>السعر:</label><br>
+    <input type="number" name="price" required><br><br>
+
+    <label>أضف صور للمنتوج:</label><br>
+    <input type="file" name="images[]" accept="image/*" multiple required><br><br>
+
+    <button type="submit">نشر الإعلان</button>
+  </form>
+</div>
+</body>
+</html>
